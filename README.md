@@ -20,6 +20,8 @@ Wallpaper is taken from ~/Wallpapers/wallpaper.\*
 
 ## Commands
 
+Note: On MacOS change Windows for Command
+
 | Command                    | Description                                               |
 |---------------------------|-----------------------------------------------------------|
 | Right-click on Polybar     | Change the Polybar theme using the right-click menu.       |
