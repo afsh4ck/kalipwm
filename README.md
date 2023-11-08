@@ -2,6 +2,9 @@
 
 Deploy a professional hacking environment for Kali Linux, executing only one script.
 
+![bspwm](https://github.com/afsh4ck/kalipwm/assets/132138425/cac4fb37-fd1b-43d5-a16f-90b867742da2)
+![bspwm2](https://github.com/afsh4ck/kalipwm/assets/132138425/7a7890a3-71ef-4664-8435-560053eb87ba)
+
 ## Usage
 
 - The use of a new/clean Kali Linux 2023 installation is recommended.
