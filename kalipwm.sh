@@ -21,10 +21,10 @@ echo "
 ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝
 "
 sleep 2
-echo -e "\Kali PWM - Professional Hacking environment automation script."
-echo -e "\t\afsh4ck - Follow me"
+echo -e "[+] Kali PWM - Professional Hacking environment automation script."
+echo -e "[+] afsh4ck - Follow me on TikTok & Instagram!"
 sleep 3
-echo -e "\nSetting up the installation..\n"
+echo -e "\n[*] Setting up the installation..\n"
 sleep 4
 
 RPATH=`pwd`
