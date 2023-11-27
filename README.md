@@ -20,7 +20,7 @@ Wallpaper is taken from ~/Wallpapers/wallpaper.\*
 
 ## Commands
 
-Note: On MacOS change Windows for Command
+Note: On MacOS change Windows for Command, and Alt for Option
 
 | Command                    | Description                                               |
 |---------------------------|-----------------------------------------------------------|
