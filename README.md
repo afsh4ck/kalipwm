@@ -7,8 +7,8 @@ Deploy a professional hacking environment for Kali Linux, executing only one scr
 
 ## Usage
 
-- The use of a new/clean Kali Linux 2023 installation is recommended.
-- Tested on Kali Linux 2023 with VMware, VirtualBox and bare metal.
+- The use of a new/clean Kali Linux installation is recommended.
+- Tested on Kali Linux 2024.1 with VMware, VirtualBox and bare metal.
 
 1. clone repo `git clone https://github.com/afsh4ck/kalipwm.git`
 2. Change directory `cd kalipwm`
