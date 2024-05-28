@@ -22,7 +22,7 @@ echo "
 "
 sleep 2
 echo -e "[+] Kali PWM - Professional Hacking environment automation script."
-echo -e "[+] afsh4ck - Follow me on TikTok & Instagram!"
+echo -e "[+] afsh4ck - Follow me on YouTube & Instagram!"
 sleep 3
 echo -e "\n[*] Setting up the installation..\n"
 sleep 4
