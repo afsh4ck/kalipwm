@@ -25,38 +25,36 @@ Nota: En MacOS, cambia Windows por Command, y Alt por Option
 
 | Comando                     | Descripción                                                 |
 |-----------------------------|-------------------------------------------------------------|
-| Clic derecho en Polybar     | Cambia el tema de Polybar usando el menú del clic derecho.  |
-| Windows + 1,2,3,4           | Navega entre escritorios numerados.                         |
-| Windows + Enter             | Abre una nueva terminal.                                    |
-| Windows + Enter             | Divide la terminal actual.                                  |
-| Windows + Flechas           | Navega entre ventanas abiertas.                             |
-| Windows + Tab               | Cambia entre los dos escritorios más recientes.             |
-| Windows + W                 | Cierra la terminal actual.                                  |
-| Windows + Alt + R           | Recarga el entorno de escritorio.                           |
-| Windows + Alt + Q           | Reinicia BSPWM.                                             |
-| Windows + Alt + Flechas     | Redimensiona la ventana actual.                             |
-| Windows + Shift + F         | Abre Firefox.                                               |
-| Windows + Shift + B         | Abre Burp Suite.                                            |
-| Windows + Shift + 1,2,3,4   | Mueve la ventana actual a otro escritorio numerado.         |
-| Windows + Shift + Flechas   | Mueve la ventana actual.                                    |
-| Ctrl + Shift + -+           | Cambia el tamaño del texto en la terminal.                  |
-| Ctrl + T                    | Abre un navegador avanzado desde la terminal.               |
-| .config/sxhkd/sxhkdrc       | Archivo de configuración de atajos (sxhkd).                 |
-| .config/bspwm/bspwmrc       | Archivo de configuración de BSPWM.                          |
-| .config/polybar             | Carpeta con temas de Polybar.                               |
-| .config/kitty/kitty.conf    | Archivo de configuración predeterminado para el terminal Kitty. |
-| ~/Wallpapers                | Carpeta de fondos de pantalla. Solo se permite un archivo llamado wallpaper.jpg. |
-| target 10.0.0.1             | Selecciona una IP de destino mostrada en Polybar.           |
-| target reset                | Elimina el objetivo seleccionado.                           |
-| tmux                        | Cambia la terminal a tmux.                                  |
-| tmux —help                  | Muestra la ayuda de tmux.                                   |
-| p10k configure              | Configura el tema de terminal Powerlevel10K.                |
-| .zshrc                      | Archivo de configuración de ZSH y alias de comandos.        |
-| bpython                     | Python interactivo en la terminal.                          |
+| Clic derecho en Polybar     | Cambia el tema de Polybar usando el menú del clic derecho   |
+| Windows + 1,2,3,4           | Navega entre escritorios                                    |
+| Windows + Enter             | Abre una nueva terminal                                     |
+| Windows + Enter             | Divide la terminal actual                                   |
+| Windows + Flechas           | Navega entre ventanas abiertas                              |
+| Windows + Tab               | Cambia entre los dos escritorios más recientes              |
+| Windows + W                 | Cierra la terminal actual                                   |
+| Windows + Alt + R           | Recarga el entorno de escritorio                            |
+| Windows + Alt + Q           | Reinicia BSPWM                                              |
+| Windows + Alt + Flechas     | Redimensiona la ventana actual                              |
+| Windows + Shift + F         | Abre Firefox                                                |
+| Windows + Shift + B         | Abre Burp Suite                                             |
+| Windows + Shift + 1,2,3,4   | Mueve la ventana actual a otro escritorio                   |
+| Windows + Shift + Flechas   | Mueve la ventana actual                                     |
+| Ctrl + Shift + -+           | Cambia el tamaño del texto en la terminal                   |
+| Ctrl + T                    | Abre un navegador avanzado desde la terminal                |
+| .config/sxhkd/sxhkdrc       | Archivo de configuración de atajos (sxhkd)                  |
+| .config/bspwm/bspwmrc       | Archivo de configuración de BSPWM                           |
+| .config/polybar             | Carpeta con temas de Polybar                                |
+| .config/kitty/kitty.conf    | Archivo de configuración predeterminado para el terminal Kitty  |
+| ~/Wallpapers                | Carpeta de fondos de pantalla. Solo se permite un archivo llamado wallpaper.jpg  |
+| target 10.0.0.1             | Selecciona una IP de destino mostrada en Polybar            |
+| target reset                | Elimina el objetivo seleccionado                            |
+| tmux                        | Cambia la terminal a tmux                                   |
+| tmux —help                  | Muestra la ayuda de tmux                                    |
+| p10k configure              | Configura el tema de terminal Powerlevel10K                 |
+| .zshrc                      | Archivo de configuración de ZSH y alias de comandos         |
+| bpython                     | Python interactivo en la terminal                           |
 
-## Instalarás:
-
-### Paquetes principales
+## Paquete incluídos:
 
 ```
 - Hack Nerd Fonts
@@ -77,10 +75,6 @@ Nota: En MacOS, cambia Windows por Command, y Alt por Option
 - Picom
 - Neovim
 ```
-
-## Créditos
-
-Gran inspiración tomada del [repositorio de xJackSx](https://github.com/xJackSx/BSPWMparrot).
 
 ## Soporte
 
