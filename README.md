@@ -57,23 +57,23 @@ Nota: En MacOS, cambia Windows por Command, y Alt por Option
 ## Paquete incluídos:
 
 ```
-- Hack Nerd Fonts
-- Kitty
-- Tmux + oh my tmux
-- lsd
-- Python + pip + bpython
-- Neofetch
-- Batcat
-- Scrot
-- feh
-- oh my zsh + plugins
-- Powerlevel10k
-- Rofi
-- Bspwm
-- Polybar
-- Sxhkd
-- Picom
-- Neovim
+Hack Nerd Fonts
+Kitty
+Tmux + oh my tmux
+lsd
+Python + pip + bpython
+Neofetch
+Batcat
+Scrot
+feh
+oh my zsh + plugins
+Powerlevel10k
+Rofi
+Bspwm
+Polybar
+Sxhkd
+Picom
+Neovim
 ```
 
 ## Soporte
