@@ -21,8 +21,8 @@ echo "
 ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝
 "
 sleep 2
-echo -e "[+] Kali PWM - Professional Hacking environment automation script."
-echo -e "[+] afsh4ck - Follow me on YouTube & Instagram!"
+echo -e "[+] Professional Hacking environment automation script."
+echo -e "[+] @afsh4ck - Follow me on YouTube & Instagram!"
 sleep 3
 echo -e "\n[*] Setting up the installation..\n"
 sleep 4
@@ -132,15 +132,15 @@ sudo ninja -C build install
 sudo timedatectl set-timezone "Europe/Madrid"
 
 mkdir ~/screenshots
-# copy all config files
+# Copy all config files
 cp -rv $RPATH/CONFIGS/config/* ~/.config/
 
-# copy scripts
+# Copy scripts
 cp -rv $RPATH/SCRIPTS/* ~/.config/polybar/forest/scripts/
 sudo ln -s ~/.config/polybar/forest/scripts/target.sh /usr/bin/target
 sudo ln -s ~/.config/polybar/forest/scripts/screenshot.sh /usr/bin/screenshot
 
-# copy wallpapers
+# Copy wallpapers
 mkdir ~/Wallpapers/
 cp -rv $RPATH/WALLPAPERS/* ~/Wallpapers/
 
