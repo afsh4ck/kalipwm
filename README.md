@@ -10,11 +10,13 @@ Despliega un entorno de hacking profesional para Kali Linux ejecutando solo un s
 - Se recomienda el uso de una instalación nueva/limpia de Kali Linux.
 - Probado en Kali Linux 2024.1 con VMware, VirtualBox y Bare Metal.
 
-`git clone https://github.com/afsh4ck/kalipwm.git
+```
+git clone https://github.com/afsh4ck/kalipwm.git
 cd kalipwm
 bash kalipwm.sh
 sudo reboot
-Una vez reiniciado cambia a bspwm en la pantalla de inicio de sesión`
+# Una vez reiniciado cambia a bspwm en la pantalla de inicio de sesión
+```
 
 El fondo de pantalla se toma de ~/Wallpapers/wallpaper.*
 
