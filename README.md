@@ -58,6 +58,7 @@ Nota: En MacOS, cambia Windows por Command, y Alt por Option
 
 ### Paquetes principales
 
+```
 - Hack Nerd Fonts
 - Kitty
 - Tmux + oh my tmux
@@ -75,6 +76,7 @@ Nota: En MacOS, cambia Windows por Command, y Alt por Option
 - Sxhkd
 - Picom
 - Neovim
+```
 
 ## Créditos
 
