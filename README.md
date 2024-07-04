@@ -18,6 +18,7 @@ sudo reboot
 ```
 - Una vez reiniciado cambia a bspwm en la pantalla de inicio de sesión
 - El fondo de pantalla se toma de ~/Wallpapers/wallpaper.*
+- Video completo del entorno: https://youtu.be/3clLjO8W7Q4?si=GupOi6Bqwuu2O9Wk
 
 ## Comandos
 
