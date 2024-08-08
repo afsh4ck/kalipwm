@@ -144,6 +144,43 @@ sudo ln -s ~/.config/polybar/forest/scripts/screenshot.sh /usr/bin/screenshot
 mkdir ~/Wallpapers/
 cp -rv $RPATH/WALLPAPERS/* ~/Wallpapers/
 
+# Crear el script config_help
+cat << 'EOF' | sudo tee /usr/bin/config_help > /dev/null
+#!/bin/bash
+printf "\
+%-30s %s\n" "Clic derecho en Polybar" "Cambia el tema de Polybar usando el menú del clic derecho"
+printf "%-30s %s\n" "Windows + 1,2,3,4" "Navega entre escritorios"
+printf "%-30s %s\n" "Windows + Enter" "Abre una nueva terminal"
+printf "%-30s %s\n" "Windows + Enter" "Divide la terminal actual"
+printf "%-30s %s\n" "Windows + Flechas" "Navega entre ventanas abiertas"
+printf "%-30s %s\n" "Windows + Tab" "Cambia entre los dos escritorios más recientes"
+printf "%-30s %s\n" "Windows + W" "Cierra la terminal actual"
+printf "%-30s %s\n" "Windows + Alt + R" "Recarga el entorno de escritorio"
+printf "%-30s %s\n" "Windows + Alt + Q" "Reinicia BSPWM"
+printf "%-30s %s\n" "Windows + Alt + Flechas" "Redimensiona la ventana actual"
+printf "%-30s %s\n" "Windows + Shift + F" "Abre Firefox"
+printf "%-30s %s\n" "Windows + Shift + B" "Abre Burp Suite"
+printf "%-30s %s\n" "Windows + Shift + 1,2,3,4" "Mueve la ventana actual a otro escritorio"
+printf "%-30s %s\n" "Windows + Shift + Flechas" "Mueve la ventana actual"
+printf "%-30s %s\n" "Ctrl + Shift + -+" "Cambia el tamaño del texto en la terminal"
+printf "%-30s %s\n" "Ctrl + T" "Abre un navegador avanzado desde la terminal"
+printf "%-30s %s\n" ".config/sxhkd/sxhkdrc" "Archivo de configuración de atajos (sxhkd)"
+printf "%-30s %s\n" ".config/bspwm/bspwmrc" "Archivo de configuración de BSPWM"
+printf "%-30s %s\n" ".config/polybar" "Carpeta con temas de Polybar"
+printf "%-30s %s\n" ".config/kitty/kitty.conf" "Archivo de configuración predeterminado para el terminal Kitty"
+printf "%-30s %s\n" "~/Wallpapers" "Carpeta de fondos de pantalla. Solo se permite un archivo llamado wallpaper.jpg"
+printf "%-30s %s\n" "target 10.0.0.1" "Selecciona una IP de destino mostrada en Polybar"
+printf "%-30s %s\n" "target reset" "Elimina el objetivo seleccionado"
+printf "%-30s %s\n" "tmux" "Cambia la terminal a tmux"
+printf "%-30s %s\n" "tmux --help" "Muestra la ayuda de tmux"
+printf "%-30s %s\n" "p10k configure" "Configura el tema de terminal Powerlevel10K"
+printf "%-30s %s\n" ".zshrc" "Archivo de configuración de ZSH y alias de comandos"
+printf "%-30s %s\n" "bpython" "Python interactivo en la terminal"
+EOF
+
+# Asignar permisos de ejecución al script config_help
+sudo chmod +x /usr/bin/config_help
+
 # Establecer permisos de ejecución
 chmod +x ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/bspwm/scripts/bspwm_resize
@@ -171,5 +208,5 @@ rm -rf ~/github
 rm -rf $RPATH
 sudo apt autoremove -y
 
-echo -e "\n[+] Listo, Happy Hacking ;)"\n
-echo -e "\n[+] Por favor, reinicia el equipo;)"\n
+echo -e "\n[+] Listo, Happy Hacking ;)\n"
+echo -e "\n[+] Por favor, reinicia el equipo ;)\n"
