@@ -2,9 +2,7 @@
 
 Despliega un entorno de hacking profesional para Kali Linux ejecutando solo un script.
 
-![image](https://github.com/afsh4ck/kalipwm/assets/132138425/576a5610-f3ab-459e-ad9c-e439b3fbb367)
-![image](https://github.com/afsh4ck/kalipwm/assets/132138425/14e53f5d-7fdf-4c3c-bc50-dbbc7f04a84b)
-
+![Vista general del sistema](foto.png)
 
 ## Instalación y uso
 
@@ -78,11 +76,80 @@ Picom
 Neovim
 ```
 
+## Novedades
+Esta versión incluye:
+- Soporte para 2 monitores
+- Cambios en la interfaz del tema `forest` de la polybar
+- Algunos atajos extra para la terminal
+
+### Soporte para 2 monitores
+Está implementado el funcionamiento para que, conectado un monitor externo (en mi caso por HDMI) sólo se usará esta pantalla externa, la pantalla interna del portátil permanecerá apagada, este comportamiento se puede modificar en el `bspwmrc`. 
+Es más, es muy probable que debas modificarlo, dado la posibilidad de que tu ordenador haya nombrado distinto a tus pantallas, en caso de tener que hacerlo, habrá que hacer cambios en el `bspwmrc`. En caso de no querer apagar el monitor, no pongas el `--off` y repite la línea de arriba
+
+```bash
+if [[ $SCREEN -eq 1 ]]; then
+        # Define la pantalla interior eDP-1 como prmiaria con resolución 1366x768
+        xrandr --output eDP-1 --primary --mode 1366x768
+
+        # asignar los 10 workspaces a la pantalla interna
+        bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 0
+fi
+# Con monitor externo
+if [[ $SCREEN -eq 2 ]]; then
+
+        # Dimensionar el externo, lo pone como primario, define su resolución y apaga el monitor del portátil
+        xrandr --output HDMI-2 --primary --mode 1920x1080
+        xrandr --output eDP-1 --off
+
+        # asignar los 10 workspaces a la pantalla interna
+        bspc monitor HDMI-2 -d 1 2 3 4 5 6 7 8 9 0
+fi
+```
+
+> Para comprobar los nombres
+`xrandr | grep " connected "`  qeu devolverá todos los conectados, donde normalmente `eDP-1` suele se la interna, pero bueno, es ir mirando y probando.
+
+### Ajustes de la polybar.
+Con el fin de tener la polybar con distintas configuraciones de monitores, también se tendrán varias de polybar, en este caso, se ha definido una `bar/main` para usar con el externo y otra `bar/main_internal` para la del portátil, cargando en cada caso una barra distinta en la polybar. Estos cambios realizados en `polybar/forest/launch.sh`
+
+```bash
+if [ "$EXTERNAL_MONITOR" ]; then
+    # Si hay un monitor externo, lanzar la barra en el monitor externo
+    MONITOR=$EXTERNAL_MONITOR polybar -q main -c "$dir/config.ini" &
+else
+    # Si no hay un monitor externo, lanzar la barra en el monitor interno
+    MONITOR=$INTERNAL_MONITOR polybar -q main_internal -c "$dir/config.ini" &
+fi
+```
+
+Por otro lado, se han añadido modulos personalizados en el archivo `polybar/forest/user_modules.ini`, desde ahí se cargan los scripts propios para obneter la IP de la `wlan0`, `eth0` y la `tun0`, que se pueden modificar por si se quieren otras interfaces en sus propios scripts qeu están en `polybar/forest/scripts` o en la carpeta `SCRIPTS` de este repositorio.
+
+También, se ha modificado el orden de la información a mostrar en la polybar, y eso se hace en `polybar/forest/config.ini`
+
+```ini
+modules-left = launcher sep custom_eth custom_wlan custom_vpn
+modules-center = workspaces
+modules-right = target date sep sysmenu
+```
+
+### Adiciones de atajos
+Dentro de ZSH, en el `zshrc` se añaden un atajo para lanzar una conexión VPN, donde hay qeu cambiar la ruta, para la vuestra, o eliminarlo si no lo quereis.
+
+```bash
+alias htb='sudo openvpn --config /ruta/al/archivo.ovpn'
+```
+
+Por último, de cara al uso con hack the box, esñta la función `mk` para crear las carpetas requeridas para organizar mejor las pruebas sobre las máquinas
+
+
+
 ## Créditos
 - Autor:       afsh4ck 
 - Instagram:   <a href="https://www.instagram.com/afsh4ck">afsh4ck</a>
 - Youtube:     <a href="https://youtube.com/@afsh4ck">afsh4ck</a>
+- Editor       PoleG97
 
 ## Soporte
 
 <a href="https://www.buymeacoffee.com/afsh4ck" rel="nofollow"><img width="250" alt="buymeacoffe" src="https://camo.githubusercontent.com/b046532cac63358f348a2cf0b9f45916e7a13de1a2ccb4ebef504b0a882bb2b3/68747470733a2f2f63646e2e6275796d6561636f666665652e636f6d2f627574746f6e732f76322f64656661756c742d6f72616e67652e706e67" data-canonical-src="https://cdn.buymeacoffee.com/buttons/v2/default-orange.png" style="max-width: 100%;"></a>
+
