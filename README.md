@@ -2,8 +2,6 @@
 
 Despliega un entorno de hacking profesional para Kali Linux ejecutando solo un script.
 
-![Vista general del sistema](foto.png)
-
 ## Instalación y uso
 
 - Se recomienda el uso de una instalación nueva/limpia de Kali Linux.
