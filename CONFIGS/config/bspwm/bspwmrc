@@ -1,11 +1,39 @@
-#! /bin/sh
+#! /bin/bash
+
+# Full terminal
+bspc config automatic_fullscreen true
+
+# MONITOR DETECTION
+# Deteccion
+SCREEN=$(xrandr | grep " connected " | wc -l)
+
+# Sin monitor externo
+if [[ $SCREEN -eq 1 ]]; then
+        xrandr --output eDP-1 --primary --mode 1366x768
+
+        # asignar los 10 workspaces a la pantalla interna
+        bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 0
+fi
+# Con monitor externo
+if [[ $SCREEN -eq 2 ]]; then
+
+        # Dimensionar el externo y apagar el del portátil
+        xrandr --output HDMI-2 --primary --mode 1920x1080
+        xrandr --output eDP-1 --off
+
+        # asignar los 10 workspaces a la pantalla interna
+        bspc monitor HDMI-2 -d 1 2 3 4 5 6 7 8 9 0
+fi
+
+
+
 
 wmname LG3D &
 vmware-user-suid-wrapper &
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+#bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -24,10 +52,12 @@ bspc rule -a Screenkey manage=off
 feh --bg-fill ~/Wallpapers/wallpaper.*
 
 # POLYBAR
-~/.config/polybar/launch.sh --forest
+#~/.config/polybar/launch.sh --forest
+~/.config/polybar/forest/launch.sh
 
 # CUSTOM
 bspc config focus_follows_pointer true
+#bspc config automatic_fullscreen true
 
 # PICOM
 picom &
