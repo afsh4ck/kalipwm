@@ -53,7 +53,7 @@ feh --bg-fill ~/Wallpapers/wallpaper.*
 
 # POLYBAR
 #~/.config/polybar/launch.sh --forest
-~/.config/polybar/forest/launch.sh
+~/.config/polybar/launch.sh --forest
 
 # CUSTOM
 bspc config focus_follows_pointer true
