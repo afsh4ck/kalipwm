@@ -52,12 +52,10 @@ bspc rule -a Screenkey manage=off
 feh --bg-fill ~/Wallpapers/wallpaper.*
 
 # POLYBAR
-#~/.config/polybar/launch.sh --forest
 ~/.config/polybar/launch.sh --forest
 
 # CUSTOM
 bspc config focus_follows_pointer true
-#bspc config automatic_fullscreen true
 
 # PICOM
 picom &
