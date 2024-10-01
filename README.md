@@ -1,4 +1,4 @@
-# kalipwm
+# KaliPWM
 
 Despliega un entorno de hacking profesional para Kali Linux ejecutando solo un script.
 
