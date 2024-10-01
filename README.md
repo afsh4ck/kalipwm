@@ -55,7 +55,7 @@ Nota: En MacOS, cambia Windows por Command, y Alt por Option
 | .zshrc                      | Archivo de configuración de ZSH y alias de comandos         |
 | bpython                     | Python interactivo en la terminal                           |
 
-## Paquete incluídos:
+## Paquetes incluídos:
 
 ```
 Bspwm
