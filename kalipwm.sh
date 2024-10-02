@@ -22,7 +22,7 @@ echo "
 "
 sleep 2
 echo -e "[+] Script de automatización de entorno de hacking profesional."
-echo -e "[+] @afsh4ck - ¡Sígueme en YouTube e Instagram!"
+echo -e "[+] @afsh4ck - Sígueme en: YouTube, Instagram, TikTok"
 sleep 3
 echo -e "\n[*] Configurando la instalación..\n"
 sleep 4
