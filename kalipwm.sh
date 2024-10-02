@@ -171,5 +171,5 @@ rm -rf ~/github
 rm -rf $RPATH
 sudo apt autoremove -y
 
-echo -e "\n[+] Listo, Happy Hacking ;)"\n
-echo -e "\n[+] Por favor, reinicia el equipo;)"\n
+echo -e "\n[+] Entorno desplegado, Happy Hacking ;) \n"
+echo -e "\n[+] Por favor, reinicia el equipo (sudo reboot) \n"
