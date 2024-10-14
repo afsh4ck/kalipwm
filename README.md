@@ -84,6 +84,6 @@ Neovim
 
 ## Soporte
 
-<a href="https://www.buymeacoffee.com/afsh4ck" rel="nofollow"><img width="250">
-![buy-me-a-coffe](https://github.com/user-attachments/assets/4e53d55c-685f-4dfd-9f7f-865886a83762)
+<a href="https://www.buymeacoffee.com/afsh4ck" rel="nofollow"><img width="250" align="left">
+![buy-me-a-coffe](https://github.com/user-attachments/assets/8c8f9e81-334e-469e-b25e-29888cfc9fcc)
 </a>
