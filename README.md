@@ -34,7 +34,7 @@ Nota: En MacOS, cambia Windows por Command, y Alt por Option
 | Windows + Tab               | Cambia entre los dos escritorios más recientes              |
 | Windows + W                 | Cierra la terminal actual                                   |
 | Windows + Alt + R           | Recarga el entorno de escritorio                            |
-| Windows + Alt + Q           | Reinicia BSPWM                                              |
+| Windows + Alt + Q           | Reiniciar BSPWM                                             |
 | Windows + Alt + Flechas     | Redimensiona la ventana actual                              |
 | Windows + Shift + F         | Abre Firefox                                                |
 | Windows + Shift + B         | Abre Burp Suite                                             |
