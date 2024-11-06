@@ -8,7 +8,7 @@ Despliega un entorno de hacking profesional para Kali Linux ejecutando solo un s
 ## Instalación y uso
 
 - Se recomienda el uso de una instalación nueva/limpia de Kali Linux.
-- Probado en Kali Linux 2024.1 con VMware, VirtualBox y Bare Metal.
+- Testado en Kali Linux 2024.3 con VMware, VirtualBox y Bare Metal.
 
 ```
 git clone https://github.com/afsh4ck/kalipwm.git
