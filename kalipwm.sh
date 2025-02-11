@@ -90,9 +90,6 @@ sudo tar xzvf /tmp/nvim-linux64.tar.gz --directory=/opt
 sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
 sudo rm -f /opt/nvim-linux64.tar.gz
 
-# nvchad - necesita trabajo. Bloquear cursor e interacción del usuario
-# git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-
 # Instalar terminal kitty
 cat $RPATH/kitty-installer.sh | sh /dev/stdin
 # ~/.local/kitty.app/bin/kitty
