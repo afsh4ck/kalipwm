@@ -33,7 +33,7 @@ RPATH=`pwd`
 sudo apt update && sudo apt -y full-upgrade
 
 # Instalar paquetes
-sudo apt install -y git bspwm vim feh scrot scrub zsh rofi xclip xsel locate neofetch wmname acpi bspwm sxhkd \
+sudo apt install -y git bspwm vim feh scrot scrub zsh rofi xclip xsel locate neofetch wmname acpi sxhkd \
 imagemagick ranger kitty tmux python3-pip font-manager lsd bpython open-vm-tools-desktop open-vm-tools # snapd
 
 # Instalar dependencias del entorno
