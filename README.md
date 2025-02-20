@@ -68,6 +68,7 @@ Tmux + Oh my tmux
 Kitty
 lsd
 Batcat
+Fastfetch
 Scrot
 feh
 Rofi
