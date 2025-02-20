@@ -12,7 +12,7 @@ else
     fi
 fi
 
-echo "                                                                
+echo "                                                     
 @@@  @@@   @@@@@@   @@@       @@@  @@@@@@@   @@@  @@@  @@@  @@@@@@@@@@   
 @@@  @@@  @@@@@@@@  @@@       @@@  @@@@@@@@  @@@  @@@  @@@  @@@@@@@@@@@  
 @@!  !@@  @@!  @@@  @@!       @@!  @@!  @@@  @@!  @@!  @@!  @@! @@! @@!  
@@ -38,29 +38,40 @@ sudo apt update
 
 # Instalar paquetes
 sudo apt install -y git bspwm vim feh scrot scrub zsh rofi xclip xsel locate wmname acpi sxhkd \
-imagemagick ranger kitty tmux python3-pip font-manager lsd bpython open-vm-tools-desktop open-vm-tools fastfetch # (neofetch obsoleto)
+    imagemagick ranger kitty tmux python3-pip font-manager lsd bpython open-vm-tools-desktop open-vm-tools fastfetch # (neofetch obsoleto)
 
 # Instalar dependencias del entorno
 sudo apt install -y build-essential libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev \
-libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev # (xcb eliminado)
+    libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev # (xcb eliminado)
 
 # Instalar requisitos de polybar
 sudo apt install -y cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev \
-libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev \
-libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev \
-libmpdclient-dev libuv1-dev libnl-genl-3-dev
+    libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev \
+    libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev \
+    libmpdclient-dev libuv1-dev libnl-genl-3-dev
 
 # Instalar dependencias de picom
 sudo apt install -y meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev \
-libxcb-render-util0-dev libxcb-render0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev \
-libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev \
-uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev libpcre3 libpcre3-dev
+    libxcb-render-util0-dev libxcb-render0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev \
+    libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev \
+    uthash-dev libev-dev libx11-xcb-dev libxcb-glx0-dev libpcre3 libpcre3-dev
 
-# Instalar fuentes
-mkdir /tmp/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip -O /tmp/fonts/Hack.zip
-unzip /tmp/fonts/Hack.zip -d /tmp/fonts
-font-manager -i /tmp/fonts/*.ttf
+# Instalar Hack Nerd Font
+mkdir -p /tmp/fonts
+wget -q --show-progress https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip -O /tmp/fonts/Hack.zip
+unzip -q /tmp/fonts/Hack.zip -d /tmp/fonts
+mkdir -p ~/.local/share/fonts
+mv /tmp/fonts/*.ttf ~/.local/share/fonts/
+rm -rf /tmp/fonts
+fc-cache -fv
+
+# Instalar JetBrains Mono Nerd Font
+mkdir -p /tmp/fonts
+wget -q --show-progress https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip -O /tmp/fonts/JetBrainsMono.zip
+unzip -q /tmp/fonts/JetBrainsMono.zip -d /tmp/fonts
+mv /tmp/fonts/*.ttf ~/.local/share/fonts/
+rm -rf /tmp/fonts
+fc-cache -fv
 
 # Instalar ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -89,7 +100,7 @@ ln -s -f ~/.tmux/.tmux.conf ~/
 cp -v $RPATH/CONFIGS/tmux.conf.local ~/.tmux.conf.local
 
 # nvim
-wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz -O /tmp/nvim-linux64.tar.gz
+wget -q --show-progress https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz -O /tmp/nvim-linux64.tar.gz
 sudo tar xzvf /tmp/nvim-linux64.tar.gz --directory=/opt
 sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
 sudo rm -f /opt/nvim-linux64.tar.gz
@@ -99,7 +110,7 @@ cat $RPATH/kitty-installer.sh | sh /dev/stdin
 # ~/.local/kitty.app/bin/kitty
 
 # batcat
-wget https://github.com/sharkdp/bat/releases/download/v0.24.0/bat_0.24.0_amd64.deb -O /tmp/bat.deb
+wget -q --show-progress https://github.com/sharkdp/bat/releases/download/v0.24.0/bat_0.24.0_amd64.deb -O /tmp/bat.deb
 sudo dpkg -i /tmp/bat.deb
 
 # Clonar repositorios de polybar & picom
@@ -128,8 +139,7 @@ meson --buildtype=release . build
 ninja -C build
 sudo ninja -C build install
 
-# Cambiar zona horaria
-# Para listar zonas horarias ejecutar: timedatectl list-timezones
+# Cambiar zona horaria, para listar zonas horarias ejecutar: timedatectl list-timezones
 sudo timedatectl set-timezone "Europe/Madrid"
 
 mkdir ~/screenshots
@@ -155,22 +165,10 @@ chmod +x ~/.config/polybar/forest/scripts/screenshot.sh
 # Seleccionar tema de rofi
 # rofi-theme-selector
 
-# Habilitar toque para hacer clic y cambiar dirección de desplazamiento del touchpad (portátiles) https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
-# sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
-# Section "InputClass"
-#        Identifier "touchpad"
-#        MatchIsTouchpad "on"
-#        Driver "libinput"
-#        Option "Tapping" "on"
-#        Option "NaturalScrolling" "on"
-# EndSection
-#
-# EOF
-
 # Limpiar archivos
-rm -rf ~/github
-rm -rf $RPATH
-sudo apt autoremove -y
+# rm -rf ~/github
+# rm -rf $RPATH
+# sudo apt autoremove -y
 
 echo -e "\n[+] Entorno desplegado, Happy Hacking ;) \n"
 echo -e "\n[+] Por favor, reinicia el equipo (sudo reboot) \n"
