@@ -67,7 +67,6 @@ Python + pip + bpython
 Tmux + Oh my tmux
 Kitty
 lsd
-Neofetch
 Batcat
 Scrot
 feh
