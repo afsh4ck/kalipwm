@@ -34,7 +34,7 @@ sleep 4
 RPATH=`pwd`
 
 # Actualizar paquetes
-sudo apt update && sudo apt -y upgrade
+sudo apt update
 
 # Instalar paquetes
 sudo apt install -y git bspwm vim feh scrot scrub zsh rofi xclip xsel locate wmname acpi sxhkd \
