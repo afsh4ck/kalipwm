@@ -2,8 +2,8 @@
 
 Despliega un entorno de hacking profesional para Kali Linux ejecutando solo un script.
 
-![kalipwm-1](https://github.com/user-attachments/assets/ebb8e7f0-5ca0-4d52-8a81-c2be43175ad1)
-![kalipwm-2](https://github.com/user-attachments/assets/b180a1b1-475d-4dc6-b725-ae9f2fd4cd04)
+![kalipwm-1](https://github.com/user-attachments/assets/0e11571f-7c71-416f-9bb8-32ab9c47d015)
+![kalipwm-2](https://github.com/user-attachments/assets/b67853d2-922d-4303-90a8-4fbc2564555a)
 
 ## Instalación y uso
 
