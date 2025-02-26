@@ -33,7 +33,7 @@ sudo reboot
 | Windows + Enter             | Divide la terminal actual                                   |
 | Windows + Flechas           | Navega entre ventanas abiertas                              |
 | Windows + Tab               | Cambia entre los dos escritorios más recientes              |
-| Windows + W                 | Cierra la terminal actual                                   |
+| Windows + + Shift + W       | Cierra la terminal actual                                   |
 | Windows + Alt + R           | Recarga el entorno de escritorio                            |
 | Windows + Alt + Q           | Reiniciar BSPWM                                             |
 | Windows + Alt + Flechas     | Redimensiona la ventana actual                              |
@@ -43,13 +43,13 @@ sudo reboot
 | Windows + Shift + 1,2,3,4   | Mueve la ventana actual a otro escritorio                   |
 | Windows + Shift + Flechas   | Mueve la ventana actual                                     |
 | Ctrl + Shift + -+           | Cambia el tamaño del texto en la terminal                   |
-| Ctrl + T                    | Abre un navegador avanzado desde la terminal                |
+| Ctrl + T                    | Abre un buscador avanzado desde la terminal                 |
 | .config/sxhkd/sxhkdrc       | Archivo de configuración de atajos (sxhkd)                  |
 | .config/bspwm/bspwmrc       | Archivo de configuración de BSPWM                           |
 | .config/polybar             | Carpeta con temas de Polybar                                |
 | .config/kitty/kitty.conf    | Archivo de configuración predeterminado para el terminal Kitty  |
 | ~/Wallpapers                | Carpeta de fondos de pantalla. Solo se permite un archivo llamado wallpaper.jpg  |
-| target 10.0.0.1             | Selecciona una IP de destino mostrada en Polybar            |
+| target 10.0.0.1             | Selecciona una IP de destino y se muestra en la Polybar     |
 | target reset                | Elimina el objetivo seleccionado                            |
 | tmux                        | Cambia la terminal a tmux                                   |
 | tmux —help                  | Muestra la ayuda de tmux                                    |
