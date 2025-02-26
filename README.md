@@ -65,6 +65,7 @@ Polybar
 Oh my zsh + Plugins
 Powerlevel10k
 Hack Nerd Fonts
+JetBrains Font
 Python + pip + bpython
 Tmux + Oh my tmux
 Kitty
