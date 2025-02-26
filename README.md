@@ -22,7 +22,7 @@ sudo reboot
 
 ## Comandos
 
-> .[!NOTE].
+> [!NOTE]
 > En MacOS, cambia Windows por Command, y Alt por Option.
 
 | Comando                     | Descripción                                                 |
