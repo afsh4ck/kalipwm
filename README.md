@@ -22,7 +22,8 @@ sudo reboot
 
 ## Comandos
 
-> ℹ️ **Nota:** En MacOS, cambia Windows por Command, y Alt por Option.
+> .[!Nota].
+> En MacOS, cambia Windows por Command, y Alt por Option.
 
 | Comando                     | Descripción                                                 |
 |-----------------------------|-------------------------------------------------------------|
@@ -38,6 +39,7 @@ sudo reboot
 | Windows + Alt + Flechas     | Redimensiona la ventana actual                              |
 | Windows + Shift + F         | Abre Firefox                                                |
 | Windows + Shift + B         | Abre Burp Suite                                             |
+| Windows + Shift + A         | Abre el gestor de archivos Thunar                           |
 | Windows + Shift + 1,2,3,4   | Mueve la ventana actual a otro escritorio                   |
 | Windows + Shift + Flechas   | Mueve la ventana actual                                     |
 | Ctrl + Shift + -+           | Cambia el tamaño del texto en la terminal                   |
