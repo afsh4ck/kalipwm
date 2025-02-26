@@ -136,6 +136,10 @@ super + shift + f
 super + shift + b
 	burpsuite
 
+# Thunar File Manager
+super + shift + a
+	thunar
+
 ###############
 # ScreenShots #
 ###############
