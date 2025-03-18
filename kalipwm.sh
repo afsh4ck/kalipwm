@@ -110,8 +110,7 @@ cat $RPATH/kitty-installer.sh | sh /dev/stdin
 # ~/.local/kitty.app/bin/kitty
 
 # batcat
-wget -q --show-progress https://github.com/sharkdp/bat/releases/download/v0.24.0/bat_0.24.0_amd64.deb -O /tmp/bat.deb
-sudo dpkg -i /tmp/bat.deb
+sudo apt install bat
 
 # Clonar repositorios de polybar & picom
 mkdir ~/github
