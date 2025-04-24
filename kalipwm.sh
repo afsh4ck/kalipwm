@@ -109,8 +109,10 @@ sudo rm -f /opt/nvim-linux64.tar.gz
 cat $RPATH/kitty-installer.sh | sh /dev/stdin
 # ~/.local/kitty.app/bin/kitty
 
-# batcat
-sudo apt install bat
+# Instalar batcat
+wget https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz
+tar -xvzf bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz
+sudo mv bat-v0.25.0-x86_64-unknown-linux-gnu/bat /usr/local/bin/
 
 # Clonar repositorios de polybar & picom
 mkdir ~/github
