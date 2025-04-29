@@ -1,18 +1,25 @@
 #!/bin/bash
 
+# Colores
+GREEN=$(tput setaf 2)
+BLUE=$(tput setaf 4)
+RED=$(tput setaf 1)
+RESET=$(tput sgr0)
+
 # Comprobar si el usuario actual es root
 if [ "$UID" -eq 0 ]; then
-    echo "No se puede ejecutar como root."
+    echo -e "${RED}[-] No se puede ejecutar como root.${RESET}"
     exit 1
 else
     # Comprobar si se está usando sudo
     if [ -n "$SUDO_USER" ]; then
-        echo "No uses sudo"
+        echo -e "${RED}[-] No uses sudo.${RESET}"
         exit 1
     fi
 fi
 
-echo "                                                     
+# Banner en verde
+echo -e "${GREEN}
 @@@  @@@   @@@@@@   @@@       @@@  @@@@@@@   @@@  @@@  @@@  @@@@@@@@@@   
 @@@  @@@  @@@@@@@@  @@@       @@@  @@@@@@@@  @@@  @@@  @@@  @@@@@@@@@@@  
 @@!  !@@  @@!  @@@  @@!       @@!  @@!  @@@  @@!  @@!  @@!  @@! @@! @@!  
@@ -23,12 +30,13 @@ echo "
 :!:  !:!  :!:  !:!   :!:      :!:  :!:       :!:  :!:  :!:  :!:     :!:  
  ::  :::  ::   :::   :: ::::   ::   ::        :::: :: :::   :::     ::   
  :   :::   :   : :  : :: : :  :     :          :: :  : :     :      :    
-"
+${RESET}"
+
 sleep 2
-echo -e "[+] Script de automatización de entorno de hacking profesional."
+echo -e "${GREEN}[+] Script de automatización de entorno de hacking profesional.${RESET}"
 echo -e "[+] @afsh4ck - Sígueme en: YouTube, Instagram, TikTok"
 sleep 3
-echo -e "\n[*] Configurando la instalación..\n"
+echo -e "\n${BLUE}[*] Configurando la instalación..${RESET}\n"
 sleep 4
 
 RPATH=`pwd`
@@ -38,11 +46,11 @@ sudo apt update
 
 # Instalar paquetes
 sudo apt install -y git bspwm vim feh scrot scrub zsh rofi xclip xsel locate wmname acpi sxhkd \
-    imagemagick ranger kitty tmux python3-pip font-manager lsd bpython open-vm-tools-desktop open-vm-tools fastfetch # (neofetch obsoleto)
+    imagemagick ranger kitty tmux python3-pip font-manager lsd bpython open-vm-tools-desktop open-vm-tools fastfetch
 
 # Instalar dependencias del entorno
 sudo apt install -y build-essential libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev \
-    libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev # (xcb eliminado)
+    libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev
 
 # Instalar requisitos de polybar
 sudo apt install -y cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev \
@@ -86,7 +94,6 @@ cp -v $RPATH/CONFIGS/p10k.zsh ~/.p10k.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 rm -f ~/.zshrc
-# ¿Instalar zsh-autocomplete?
 cp -v $RPATH/CONFIGS/zshrc ~/.zshrc
 
 # Instalar fzf
@@ -107,7 +114,6 @@ sudo rm -f /opt/nvim-linux64.tar.gz
 
 # Instalar terminal kitty
 cat $RPATH/kitty-installer.sh | sh /dev/stdin
-# ~/.local/kitty.app/bin/kitty
 
 # Instalar batcat
 wget https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz
@@ -140,36 +146,26 @@ meson --buildtype=release . build
 ninja -C build
 sudo ninja -C build install
 
-# Cambiar zona horaria, para listar zonas horarias ejecutar: timedatectl list-timezones
+# Cambiar zona horaria
 sudo timedatectl set-timezone "Europe/Madrid"
 
 mkdir ~/screenshots
-# Copiar todos los archivos de configuración
-cp -rv $RPATH/CONFIGS/config/* ~/.config/
 
-# Copiar scripts
+# Copiar configuraciones
+cp -rv $RPATH/CONFIGS/config/* ~/.config/
 cp -rv $RPATH/SCRIPTS/* ~/.config/polybar/forest/scripts/
 sudo ln -s ~/.config/polybar/forest/scripts/target.sh /usr/bin/target
 sudo ln -s ~/.config/polybar/forest/scripts/screenshot.sh /usr/bin/screenshot
 
-# Copiar wallpapers
 mkdir ~/Wallpapers/
 cp -rv $RPATH/WALLPAPERS/* ~/Wallpapers/
 
-# Establecer permisos de ejecución
 chmod +x ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/bspwm/scripts/bspwm_resize
 chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/forest/scripts/target.sh
 chmod +x ~/.config/polybar/forest/scripts/screenshot.sh
 
-# Seleccionar tema de rofi
-# rofi-theme-selector
-
-# Limpiar archivos
-# rm -rf ~/github
-# rm -rf $RPATH
-# sudo apt autoremove -y
-
-echo -e "\n[+] Entorno desplegado, Happy Hacking ;) \n"
-echo -e "\n[+] Por favor, reinicia el equipo (sudo reboot) \n"
+# Mensajes finales
+echo -e "\n${BLUE}[+] Entorno desplegado, Happy Hacking ;)${RESET}\n"
+echo -e "${BLUE}[+] Por favor, reinicia el equipo (sudo reboot)${RESET}\n"
