@@ -37,7 +37,7 @@ echo -e "${GREEN}[+] Script de automatización de entorno de hacking profesional
 echo -e "[+] @afsh4ck - Sígueme en: YouTube, Instagram, TikTok"
 sleep 3
 echo -e "\n${BLUE}[*] Configurando la instalación..${RESET}\n"
-sleep 4
+sleep 3
 
 RPATH=`pwd`
 
@@ -48,7 +48,7 @@ sudo apt update
 # Instalar paquetes
 echo -e "\n${BLUE}[*] Instalando paquetes..${RESET}\n"
 sudo apt install -y git bspwm vim feh scrot scrub zsh rofi xclip xsel locate wmname acpi sxhkd \
-    imagemagick ranger kitty tmux python3-pip font-manager lsd bpython open-vm-tools-desktop open-vm-tools fastfetch
+    imagemagick ranger kitty tmux python3-pip font-manager lsd bat bpython open-vm-tools-desktop open-vm-tools fastfetch
 
 # Instalar dependencias del entorno
 echo -e "\n${BLUE}[*] Instalando dependencias del entorno..${RESET}\n"
@@ -126,12 +126,6 @@ sudo rm -f /opt/nvim-linux64.tar.gz
 # Instalar terminal kitty
 echo -e "\n${BLUE}[*] Instalando terminal kitty..${RESET}\n"
 cat $RPATH/kitty-installer.sh | sh /dev/stdin
-
-# Instalar batcat
-echo -e "\n${BLUE}[*] Instalando batcat..${RESET}\n"
-wget https://github.com/sharkdp/bat/releases/download/v0.25.0/bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz
-tar -xvzf bat-v0.25.0-x86_64-unknown-linux-gnu.tar.gz
-sudo mv bat-v0.25.0-x86_64-unknown-linux-gnu/bat /usr/local/bin/
 
 # Clonar repositorios de polybar & picom
 mkdir ~/github
