@@ -118,7 +118,7 @@ cp -v $RPATH/CONFIGS/tmux.conf.local ~/.tmux.conf.local
 
 # nvim
 echo -e "\n${BLUE}[*] Instalando nvim..${RESET}\n"
-wget -q --show-progress https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz -O /tmp/nvim-linux64.tar.gz
+wget -q --show-progress https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz -O /tmp/nvim-linux64.tar.gz
 sudo tar xzvf /tmp/nvim-linux64.tar.gz --directory=/opt
 sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
 sudo rm -f /opt/nvim-linux64.tar.gz
