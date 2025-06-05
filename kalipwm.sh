@@ -30,10 +30,11 @@ echo -e "${GREEN}
 :!:  !:!  :!:  !:!   :!:      :!:  :!:       :!:  :!:  :!:  :!:     :!:  
  ::  :::  ::   :::   :: ::::   ::   ::        :::: :: :::   :::     ::   
  :   :::   :   : :  : :: : :  :     :          :: :  : :     :      :    
-${RESET}"
+"
 
 sleep 2
-echo -e "${GREEN}[+] Script de automatización de entorno de hacking profesional.${RESET}"
+echo -e "[+] Script de automatización de entorno de hacking profesional.${RESET}"
+sleep 1
 echo -e "[+] @afsh4ck - Sígueme en: YouTube, Instagram, TikTok"
 sleep 3
 echo -e "\n${BLUE}[*] Configurando la instalación..${RESET}\n"
@@ -48,7 +49,8 @@ sudo apt update
 # Instalar paquetes
 echo -e "\n${BLUE}[*] Instalando paquetes..${RESET}\n"
 sudo apt install -y git bspwm vim feh scrot scrub zsh rofi xclip xsel locate wmname acpi sxhkd \
-    imagemagick ranger kitty tmux python3-pip font-manager lsd bat bpython open-vm-tools-desktop open-vm-tools fastfetch
+    imagemagick ranger kitty tmux python3-pip font-manager lsd bat bpython open-vm-tools-desktop open-vm-tools fastfetch \
+    dirsearch feroxbuster gedit
 
 # Instalar dependencias del entorno
 echo -e "\n${BLUE}[*] Instalando dependencias del entorno..${RESET}\n"
