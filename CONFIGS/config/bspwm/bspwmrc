@@ -29,6 +29,9 @@ feh --bg-fill ~/Wallpapers/wallpaper.*
 # CUSTOM
 bspc config focus_follows_pointer true
 
+# Resolución Full HD
+xrandr --output Virtual1 --mode 1920x1080
+
 # PICOM
 picom &
 bspc config border_width 0
